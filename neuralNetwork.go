@@ -30,7 +30,7 @@ type ResultNetWork struct {
 }
 
 type neuralNet struct {
-	config  neuralNetConfig
+	config  NeuralNetConfig
 	wHidden *mat.Dense
 	bHidden *mat.Dense
 	wOut    *mat.Dense
@@ -48,7 +48,7 @@ type NeuralNetConfig struct {
 
 // InputParamNetwork param input for network
 type InputParamNetwork struct {
-	config       neuralNetConfig
+	config       NeuralNetConfig
 	countRow     int
 	countInput   int
 	countOutput  int
@@ -59,7 +59,7 @@ type InputParamNetwork struct {
 	labelData    []float64
 }
 
-func newNetwork(config neuralNetConfig) *neuralNet {
+func newNetwork(config NeuralNetConfig) *neuralNet {
 	return &neuralNet{config: config}
 }
 
@@ -312,7 +312,7 @@ func ProcessNeural(param InputParamNetwork) ResultNetWork {
 }
 
 //PredictWithNeural predict data
-func PredictWithNeural(config neuralNetConfig, dataNetWork ResultNetWork, rows int, countInput int, countOutput int, inputData []float64) []float64 {
+func PredictWithNeural(config NeuralNetConfig, dataNetWork ResultNetWork, rows int, countInput int, countOutput int, inputData []float64) []float64 {
 	network := newNetwork(config)
 	wHidden := mat.NewDense(config.inputNeurons, config.hiddenNeurons, dataNetWork.wHidden)
 	bHidden := mat.NewDense(1, config.hiddenNeurons, dataNetWork.bHidden)
