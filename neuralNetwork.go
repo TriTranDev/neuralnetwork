@@ -37,7 +37,8 @@ type neuralNet struct {
 	bOut    *mat.Dense
 }
 
-type neuralNetConfig struct {
+// NeuralNetConfig object
+type NeuralNetConfig struct {
 	inputNeurons  int
 	outputNeurons int
 	hiddenNeurons int
@@ -266,7 +267,8 @@ func correlationCoefficient(X []float64, Y []float64, n int) float64 {
 
 }
 
-func processNeural(param InputParamNetwork) ResultNetWork {
+//ProcessNeural main function
+func ProcessNeural(param InputParamNetwork) ResultNetWork {
 	network := newNetwork(param.config)
 	input := mat.NewDense(param.countRow, param.countInput, param.inputData)
 	label := mat.NewDense(param.countRow, param.countOutput, param.outputData)
@@ -309,7 +311,8 @@ func processNeural(param InputParamNetwork) ResultNetWork {
 	return resultNetwork
 }
 
-func predictWithNeural(config neuralNetConfig, dataNetWork ResultNetWork, rows int, countInput int, countOutput int, inputData []float64) []float64 {
+//PredictWithNeural predict data
+func PredictWithNeural(config neuralNetConfig, dataNetWork ResultNetWork, rows int, countInput int, countOutput int, inputData []float64) []float64 {
 	network := newNetwork(config)
 	wHidden := mat.NewDense(config.inputNeurons, config.hiddenNeurons, dataNetWork.wHidden)
 	bHidden := mat.NewDense(1, config.hiddenNeurons, dataNetWork.bHidden)
