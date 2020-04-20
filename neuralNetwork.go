@@ -29,14 +29,6 @@ type ResultNetWork struct {
 	correlationValue float64
 }
 
-type neuralNet struct {
-	config  NeuralNetConfig
-	wHidden *mat.Dense
-	bHidden *mat.Dense
-	wOut    *mat.Dense
-	bOut    *mat.Dense
-}
-
 // NeuralNetConfig object
 type NeuralNetConfig struct {
 	inputNeurons  int
@@ -44,6 +36,14 @@ type NeuralNetConfig struct {
 	hiddenNeurons int
 	numEpochs     int
 	learningRate  float64
+}
+
+type neuralNet struct {
+	config  NeuralNetConfig
+	wHidden *mat.Dense
+	bHidden *mat.Dense
+	wOut    *mat.Dense
+	bOut    *mat.Dense
 }
 
 // InputParamNetwork param input for network
