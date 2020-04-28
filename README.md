@@ -52,10 +52,11 @@ result := neuralnetwork.ProcessNeural(inputParam)
 ```
 
 call ProcessNeural to build the network and check the [Correlation Coefficient](https://www.investopedia.com/terms/c/correlationcoefficient.asp)
+
 ```bash
 Correlation Coefficient  0.9903012888981333
 ```
-
+The result look so good. It maybe different in your version.
 ## Note
 Maybe prepare your data if you use different data format
 
