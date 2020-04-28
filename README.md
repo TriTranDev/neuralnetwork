@@ -12,8 +12,8 @@ Use go get to install this package
 
 ## Usage
 
-Please check Example.
-first create config
+Please check Example.<br />
+first create config <br />
 ```golang
 config := neuralnetwork.NeuralNetConfig{
 		InputNeurons:  inputNumber,
@@ -24,11 +24,11 @@ config := neuralnetwork.NeuralNetConfig{
 	}
 ```
 
-inputNumber: lenght of your input put data
-outputNumber: lenght of your out put data
-hiddenNumber: lenght of your hidden you want to use example 10,20,100....
-NumEpochs: number of loops when you train the neural
-LearningRate: it use for training neural, check google for more information.
+inputNumber: lenght of your input put data <br />
+outputNumber: lenght of your out put data <br />
+hiddenNumber: lenght of your hidden you want to use example 10,20,100.... <br />
+NumEpochs: number of loops when you train the neural <br />
+LearningRate: it use for training neural, check google for more information. <br />
 
 ```golang
 inputParam := neuralnetwork.InputParamNetwork{
@@ -44,7 +44,7 @@ inputParam := neuralnetwork.InputParamNetwork{
 	}
 ```
 
-this is param for build the network
+this is param for build the network <br />
 
 ```golang
 result := neuralnetwork.ProcessNeural(inputParam)
@@ -52,6 +52,9 @@ result := neuralnetwork.ProcessNeural(inputParam)
 ```
 
 call ProcessNeural to build the network and check the [Correlation Coefficient](https://www.investopedia.com/terms/c/correlationcoefficient.asp)
+
+## Note
+Maybe prepare your data if you use different data format
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
