@@ -1,7 +1,7 @@
 # neuralnetwork
 
 ## What is it?
-This is back-propagation  neural network for only one hidden layer. I will update it for muilti hidden layer later.
+This is back-propagation  neural network for only one hidden layer. I will update it for multiple hidden layer later.
 
 ## Installation
 Use go get to install this package
